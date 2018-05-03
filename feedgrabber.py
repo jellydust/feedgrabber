@@ -31,7 +31,7 @@ def import_feeds():
   print('1. Go to https://www.youtube.com/subscription_manager ')
   print('2. Click "Export Subscriptions" at the bottom of the page.')
   print('3. Move the "subscription_manager.xml" file to the same folder as this script.')
-  input('\nPress any key when ready to import.')
+  input('\nPress enter when ready to import.')
   filename = 'subscription_manager.xml'
   if os.path.isfile(filename):
     print('File found, continuing with import...')
@@ -46,8 +46,13 @@ def import_feeds():
 
   for feed in d.feeds:
 
-    # Check if the name already exists in the database, if it does, skip
+    # Check if the name contains valid characters
     videos_name = ''.join(e for e in feed.title if e.isalnum()) 
+
+    for letter in videos_name:
+      if ord(letter) < 48 or ord(letter) > 127:
+        videos_name = videos_name.replace(letter,'x')
+
     already_subbed = list()
     
 
@@ -102,13 +107,13 @@ def add_sub():
   d = feedparser.parse(table_url) 
   if 'title' not in d.feed:
     option = input('WARNING: There are missing elements in the feed provided. Continue anyways? (y/N) ')
-    if option.lower() != 'y' or option.lower() != 'yes':
+    if option.lower() != 'y':
       print('Aborting ...')
       return
 
   # A sanitized version of the entered name
   videos_name = ''.join(e for e in table_name if e.isalnum())
-
+  #videos_name = ''.join([i if ord(i) < 128 else ' ' for i in videos_name])
 
   # Check if the name already exists in the database, if it does, return
   c.execute('''SELECT name FROM subscriptions''')

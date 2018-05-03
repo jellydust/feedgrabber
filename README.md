@@ -12,6 +12,7 @@ FEATURES/TODO :
 - [x] Download all new videos
   - [x] Download all new videos through Hooktube
   - [ ] Set download path
+  - [ ] Set download scructure
   - [ ] Set preferred resolution/quality
   - [ ] Delete after X days
   - [ ] Delete if larger than X size
