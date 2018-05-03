@@ -339,15 +339,15 @@ def download_all_videos(proxy=False):
 def watch_for_videos(proxy=False):
   '''Check for videos, download them, and then wait on a timer to check again'''
   print('Checking for videos ...')
-  seconds = 10
-  timer = seconds * 3600
+  minute = 60
+  timer = minute * 60
   while True:
     check_for_videos()
     if proxy:
       download_all_videos()
     else:
       download_all_videos(True)
-    print('Sleeping for {time} minutes ...'.format(time=timer/seconds))
+    print('Sleeping for {time} minutes ...'.format(time=timer/minute))
     time.sleep(int(timer))
     print('Time elapsed, checking for videos ...')
  
