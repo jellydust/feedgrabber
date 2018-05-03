@@ -406,7 +406,7 @@ def menu_help():
   print('  [watcher] - watch for videos on a timer')
   print('  [watcherp] - watch for videos on a timer through Hooktube')
   print('  [run] - grab the latest videos')
-  print('  [runp] - grap the latest videos through Hooktube')
+  print('  [runp] - grab the latest videos through Hooktube')
   print('  [url] - helps create a Youtube RSS feed')
   print('  [import] - import a youtube subscription xml')
   print('  [quit] - exits the program')
