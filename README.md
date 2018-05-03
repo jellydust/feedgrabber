@@ -21,4 +21,5 @@ FEATURES/TODO :
   - [ ] Allow user to enter file destination
 
 - [ ] Clean up code
+  - [ ] Give better names to variables
 - [ ] Clean up comments

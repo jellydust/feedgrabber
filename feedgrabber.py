@@ -23,12 +23,15 @@ CREATE TABLE IF NOT EXISTS subscriptions (
 
 
 def import_feeds():
+  '''Import feeds from Youtube's subscription_manager.xml file'''
+
+  # Multiple prints, TODO: Is this efficient?
   print('\nThis will import all of your exported youtube subscriptions. ')
   print('0. Login to your Youtube account.')
   print('1. Go to https://www.youtube.com/subscription_manager ')
   print('2. Click "Export Subscriptions" at the bottom of the page.')
   print('3. Move the "subscription_manager.xml" file to the same folder as this script.')
-
+  input('\nPress any key when ready to import.')
   filename = 'subscription_manager.xml'
   if os.path.isfile(filename):
     print('File found, continuing with import...')
