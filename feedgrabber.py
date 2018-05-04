@@ -12,7 +12,7 @@ db_location = 'db.sqlite'
 db = sqlite3.connect(db_location)
 c = db.cursor()
 
-# Create the table in the db if it does not exist
+# Create the subscription table in the db if it does not exist
 c.execute('''
 CREATE TABLE IF NOT EXISTS subscriptions (
   id integer PRIMARY KEY,
@@ -21,6 +21,13 @@ CREATE TABLE IF NOT EXISTS subscriptions (
   videos text NOT NULL UNIQUE
 )''')
 
+# Create the preferences tables in the db if it does not exist
+c.execute('''
+CREATE TABLE IF NOT EXISTS preferences (
+  if integer PRIMARY KEY,
+  name text NOT NULL UNIQUE,
+  value text NOT NULl
+)''')
 
 def import_feeds():
   '''Import feeds from Youtube's subscription_manager.xml file'''
