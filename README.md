@@ -13,16 +13,20 @@ FEATURES/TODO :
   - [ ] Delete multiple feeds at once
 - [x] Download all new videos
   - [x] Download all new videos through Hooktube
-  - [ ] Set download path
-  - [ ] Set download scructure
-  - [ ] Set preferred resolution/quality
-  - [ ] Delete after X days
-  - [ ] Delete if larger than X size
   - [x] Download videos on timer
-    - [ ] Set timer duration
+  - [ ] Adhere to preferences
+  - [ ] Overall download progress bar
+- [ ] Preferences
+	- [ ] Video quality
+	- [ ] Downloads folder
+	- [ ] Purge timer
+	- [ ] Max download folder size
+- [ ] Purge all downloaded videos
 - [x] Import Youtube subscription feed
   - [ ] Allow user to enter file destination
-
+- [ ] Scheduled delete tasks
+	- [ ] delete after x elapsed time
+	- [ ] delete to make space
 - [ ] Clean up code
   - [ ] Give better names to variables
 - [ ] Clean up comments
