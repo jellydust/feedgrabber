@@ -21,6 +21,7 @@ FEATURES/TODO :
 	- [ ] Downloads folder
 	- [ ] Purge timer
 	- [ ] Max download folder size
+	- [ ] Backup database option
 - [ ] Purge all downloaded videos
 - [x] Import Youtube subscription feed
   - [ ] Allow user to enter file destination
