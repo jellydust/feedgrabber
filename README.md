@@ -16,6 +16,8 @@ FEATURES/TODO :
   - [x] Download videos on timer
   - [ ] Adhere to preferences
   - [ ] Overall download progress bar
+  - [ ] Skip download if .mp4/quality is not available
+  - [ ] Only download .mp4
 - [ ] Preferences
 	- [ ] Video quality
 	- [ ] Downloads folder
