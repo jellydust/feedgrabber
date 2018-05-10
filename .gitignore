@@ -1,2 +1,6 @@
 *.xml
 *.sqlite
+*.mp4
+*.part
+.python-version
+*.swp

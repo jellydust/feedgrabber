@@ -452,7 +452,7 @@ while (True):
     run_watcher()
   elif option == 'watcherp':
     run_watcher(True)
-  elif option == 'quit':
+  elif option == 'quit' or option == 'exit':
     leave()
   elif option == 'help':
     menu_help()
