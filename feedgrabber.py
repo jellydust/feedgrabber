@@ -246,14 +246,14 @@ def progress_hook(feed):
   if feed['status'] == 'finished':
     print('Done downloading file: {filename}'.format(filename=feed['filename']))
 
-
+# need to add ffmpeg
 youtube_dl_flags = {
   'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]',
-  'merge-output-format': 'mp4',
+  'merge_output_format': 'mp4',
   'outtmpl': '%(uploader)s/%(upload_date)s - %(title)s.%(ext)s', 
-  'ignore-errors',
-  'no-playlist',
-  'download-archive': 'history.log',
+  'ignoreerrors',
+  'noplaylist',
+  'download_archive': 'history.log',
   'logger': MyLogger(),
   'progress_hooks': [progress_hook],
 }
