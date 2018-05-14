@@ -248,8 +248,12 @@ def progress_hook(feed):
 
 
 youtube_dl_flags = {
-  'format': 'best/best',
+  'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]',
+  'merge-output-format': 'mp4',
   'outtmpl': '%(uploader)s/%(upload_date)s - %(title)s.%(ext)s', 
+  'ignore-errors',
+  'no-playlist',
+  'download-archive': 'history.log',
   'logger': MyLogger(),
   'progress_hooks': [progress_hook],
 }
