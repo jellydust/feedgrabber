@@ -240,6 +240,7 @@ class MyLogger(object):
     def error(self, msg):
         print(msg)
 
+# future: youtube-dl -ignore-errors --no-playlist --add-metadata --restrict-filenames --batch-file=test.txt --download-archive "here.txt" -f bestvideo[ext=mp4]+bestaudio[ext=m4a] --merge-output-format mp4 --write-thumbnail 
 def progress_hook(feed):
   '''Watches for the 'finished' status from ydl to provide the filename to the user'''
   if feed['status'] == 'finished':
@@ -248,7 +249,7 @@ def progress_hook(feed):
 
 youtube_dl_flags = {
   'format': 'best/best',
-  'outtmpl': '%(uploader)s - %(upload_date)s - %(title)s.%(ext)s', 
+  'outtmpl': '%(uploader)s/%(upload_date)s - %(title)s.%(ext)s', 
   'logger': MyLogger(),
   'progress_hooks': [progress_hook],
 }
